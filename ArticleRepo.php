@@ -1,5 +1,5 @@
 <?php
-class ArticleRepo{
+class ArticleRepo extends Article{
     protected $_db;
 
     public function setDb(PDO $db){
