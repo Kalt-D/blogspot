@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,10 +8,68 @@
   <link rel="stylesheet" href="styles.css">
   <title>Blogpost</title>
 </head>
-<body>
-  
-<h1>Blog Posts</h1>
-<span>Images from <a href="freepik.com" id="source">Freepik</a></span>
 
+<body>
+
+  <h1>Blog Posts</h1>
+  <span>Images from <a href="https://www.freepik.com" id="source">Freepik</a></span>
+  <br>
+  <?php $q=$data->prepare('SELECT * FROM posts');
+  $q->execute();
+  $row=$q->fetchAll();?>
+  <div class="table_wrapper">
+    <div id="t1">
+      <table>
+        <tr>
+          <td>
+            <?=$row[0]['titre']?>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <?=$row[0]['contenu']?>
+          </td>
+        </tr>
+        <tr>
+          <td>READ MORE</td>
+        </tr>
+      </table>
+    </div>
+    <div id="t2">
+      <table>
+        <tr>
+          <td>
+            <?=$row[1]['titre']?>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <?=$row[1]['contenu']?>
+          </td>
+        </tr>
+        <tr>
+          <td>READ MORE</td>
+        </tr>
+      </table>
+    </div>
+    <div id="t3">
+      <table>
+        <tr>
+          <td>
+            <?=$row[2]['titre']?>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <?=$row[2]['contenu']?>
+          </td>
+        </tr>
+        <tr>
+          <td>READ MORE</td>
+        </tr>
+      </table>
+    </div>
+  </div>
 </body>
+
 </html>
