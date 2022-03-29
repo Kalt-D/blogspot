@@ -126,3 +126,15 @@ footer {
 footer > div > span{
     margin-bottom:0.5em;
 }
+
+#sep{
+    background-color:white;
+    width:95%;
+    height:1px;
+    margin:auto auto 2em auto;
+}
+
+#foot2{
+    background-color:black;
+    padding-bottom:2em;
+}
