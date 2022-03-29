@@ -30,38 +30,23 @@
   <span id="sous-titre">Images from <a href="https://www.freepik.com" id="source">Freepik</a></span>
   <?php 
   $repo=new ArticleRepo($data);
-  $article=new Article($row[2]);
-  $article2=new Article($row[1]);
-  $article3=new Article($row[0]);
+  $articles=array();
+  for ($i=0;$i<count($row);$i++){
+    $article=new Article($row[$i]);
+    array_push($articles,$article);
+  }
+  echo '<div class="table_wrapper">';
+  foreach($articles as $table){
+    foreach($table as $key=>$value){
   ?>
-  <div class="table_wrapper">
-    <div id="t1">
+  
+    <div>
       <img src="photo1.png">
       <span class="titre">
-        <?=$article->_titre?>
+        <?=$table->_titre;}}?>
       </span>
       <span class="contenu">
         <?=$article->_contenu?>
-      </span>
-      <span>READ MORE</span>
-    </div>
-    <div id="t2">
-      <img src="photo2.jpg">
-      <span class="titre">
-        <?=$article2->_titre?>
-      </span>
-      <span class="contenu">
-        <?=$article2->_contenu?>
-      </span>
-      <span>READ MORE</span>
-    </div>
-    <div id="t3">
-      <img src="photo3.png">
-      <span class="titre">
-        <?=$article3->_titre?>
-      </span>
-      <span class="contenu">
-        <?=$article3->_contenu?>
       </span>
       <span>READ MORE</span>
     </div>
