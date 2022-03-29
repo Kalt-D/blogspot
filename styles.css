@@ -1,71 +1,128 @@
-header{
-    background-color:white;
-    color:black;
-    font-size:20px;
-    height:7ch;
-    width:100%;
-    padding-top:3ch;
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Playfair+Display:wght@700&display=swap');
+
+header {
+	background-color: white;
+	color: black;
+	font-size: 20px;
+	height: 7ch;
+	width: 100%;
 }
 
-header > div{
-    float:right;
-    max-width:60%;
-    padding-top:1ch;
+header > div {
+	float: right;
+	max-width: 60%;
+	margin-top: 1em;
 }
 
-header > div > span{
-    padding-right:3ch;
+header > div > span {
+	padding-right: 3ch;
 }
 
-#logo{
-    color:rgb(180,180,180);
-    float:left;
-    padding-left:0.5ch;
-    font-size:42px;
-    font-weight:bold;
+#logo {
+	color: rgb(180, 180, 180);
+	float: left;
+	padding-left: 0.5ch;
+	font-size: 42px;
+	font-weight: bold;
 }
 
-#active{
-    color:green;
+#active {
+	color: green;
 }
 
-body{
-    background-color: #292D33;
-    color:white;
-    text-align: center;
-    margin:0;
-    padding:0;
+body {
+	background-color: #292d33;
+	font-family: 'Oswald', sans-serif;
+	color: white;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	font-size: 24px;
 }
 
-#source{
-    color:white;
-    text-decoration: underline;
+h1 {
+	margin-top: 1ch;
+	font-size: 100px;
+	margin-bottom: 0;
 }
 
-.table_wrapper{
-    display:flex;
-    flex-direction:row;
-    justify-content:center;
-    margin:auto;
-    width:100%;
+#sous-titre {
+	font-size: 24px;
 }
 
-#t1,#t2,#t3{
-    width:30em;
-    margin:5px;
-    padding-bottom:4ch;
-    display:flex;
-    flex-direction:column;
-    background-color:white;
-    color:black;
+#source {
+	color: white;
+	text-decoration: underline;
 }
 
-.table_wrapper img{
-    height:20em;
+.table_wrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	margin: 2.5ch auto auto auto;
+	width: 100%;
 }
 
-h1{
-    margin-top:2ch;
-    font-size:62px;
+.table_wrapper img {
+	height: 20em;
 }
 
+#t1,
+#t2,
+#t3 {
+	width: 32%;
+	margin: 5px;
+	padding-bottom: 1em;
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+	color: black;
+}
+
+#t1 span,
+#t2 span,
+#t3 span {
+	margin: 0.5em auto 0.5em auto;
+}
+
+.titre {
+	font-family: 'Playfair Display', sans-serif;
+	font-size: 32px;
+}
+
+.contenu {
+	font-size: 24px;
+	margin-bottom: 3em !important;
+}
+
+button {
+	background: none;
+	color: white;
+	font-size: 24px;
+	margin-top: 2em;
+	margin-bottom: 4em;
+	padding: 1ch 2ch 1ch 2ch;
+	text-transform: uppercase;
+}
+
+footer {
+	background-color: black;
+	color: white;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	text-align: left;
+    height:10em;
+}
+
+#f1,
+#f2,
+#f3 {
+	display: flex;
+	flex-direction: column;
+    margin:3em 8em 3em -4em;
+}
+
+footer > div > span{
+    margin-bottom:0.5em;
+}

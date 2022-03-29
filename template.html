@@ -8,26 +8,26 @@
   <link rel="stylesheet" href="styles.css">
   <title>Blogpost</title>
 </head>
+
 <body>
-<header>
-  <span id="logo">logo</span>
-  <div>
-    <span>Page 2</span>
-    <span>Page 3</span>
-    <span>Page 5</span>
-    <span id="active">Page 1</span>
-    <span>Page 7</span>
-    <span>Page 8</span>
-    <span>Page 9</span>
-    <span>Page 10</span>
-  </div>
-</header>
+  <header>
+    <span id="logo">logo</span>
+    <div>
+      <span>Page 2</span>
+      <span>Page 3</span>
+      <span>Page 5</span>
+      <span id="active">Page 1</span>
+      <span>Page 7</span>
+      <span>Page 8</span>
+      <span>Page 9</span>
+      <span>Page 10</span>
+    </div>
+  </header>
 
 
 
   <h1>Blog Posts</h1>
-  <span>Images from <a href="https://www.freepik.com" id="source">Freepik</a></span>
-  <br>
+  <span id="sous-titre">Images from <a href="https://www.freepik.com" id="source">Freepik</a></span>
   <?php 
   $repo=new ArticleRepo($data);
   $article=new Article($row[2]);
@@ -66,6 +66,22 @@
       <span>READ MORE</span>
     </div>
   </div>
+  <button>Learn more</button>
 </body>
+<footer>
+  <div id="f1">
+    <span class="titre">Headline</span>
+    <span class="contenu">Lorem ipsum</span>
+  </div>
+  <div id="f2">
+    <span class="titre">Headline</span>
+    <span class="contenu">Lorem ipsum</span>
+  </div>
+  <div id="f3">
+    <span class="titre">Headline</span>
+    <span class="contenu">Lorem ipsum</span>
+  </div>
+
+</footer>
 
 </html>
