@@ -9,3 +9,7 @@ try {
     print "Error!: " . $e->getMessage() . "<br>";
     die();
 }
+
+$q = $data->prepare('SELECT * FROM posts');
+$q->execute();
+$row = $q->fetchAll();

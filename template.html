@@ -14,60 +14,39 @@
   <h1>Blog Posts</h1>
   <span>Images from <a href="https://www.freepik.com" id="source">Freepik</a></span>
   <br>
-  <?php $q=$data->prepare('SELECT * FROM posts');
-  $q->execute();
-  $row=$q->fetchAll();?>
+  <?php 
+  $repo=new ArticleRepo($data);
+  $article=new Article($row[2]);
+  $article2=new Article($row[1]);
+  $article3=new Article($row[0]);
+  ?>
   <div class="table_wrapper">
     <div id="t1">
-      <table>
-        <tr>
-          <td>
-            <?=$row[0]['titre']?>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <?=$row[0]['contenu']?>
-          </td>
-        </tr>
-        <tr>
-          <td>READ MORE</td>
-        </tr>
-      </table>
+      <span>
+        <?=$article->_titre?>
+      </span>
+      <span>
+        <?=$article->_contenu?>
+      </span>
+      <span>READ MORE</span>
     </div>
     <div id="t2">
-      <table>
-        <tr>
-          <td>
-            <?=$row[1]['titre']?>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <?=$row[1]['contenu']?>
-          </td>
-        </tr>
-        <tr>
-          <td>READ MORE</td>
-        </tr>
-      </table>
+      <span>
+        <?=$article2->_titre?>
+      </span>
+      <span>
+        <?=$article2->_contenu?>
+      </span>
+      <span>READ MORE</span>
     </div>
     <div id="t3">
-      <table>
-        <tr>
-          <td>
-            <?=$row[2]['titre']?>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <?=$row[2]['contenu']?>
-          </td>
-        </tr>
-        <tr>
-          <td>READ MORE</td>
-        </tr>
-      </table>
+      <span>
+        <?=$article3->_titre?>
+      </span>
+      <span>
+        <?=$article3->_contenu?>
+      </span>
+      <span>READ MORE</span>
     </div>
   </div>
 </body>

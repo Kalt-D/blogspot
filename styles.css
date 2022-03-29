@@ -11,7 +11,14 @@ body{
 
 .table_wrapper{
     display:flex;
-    justify-content:space-between;
+    flex-direction:row;
+    justify-content:center;
     margin:auto;
     width:100%;
+}
+
+#t1,#t2,#t3{
+    width:15ch;
+    display:flex;
+    flex-direction:column;
 }
