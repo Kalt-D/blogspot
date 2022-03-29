@@ -8,8 +8,22 @@
   <link rel="stylesheet" href="styles.css">
   <title>Blogpost</title>
 </head>
-
 <body>
+<header>
+  <span id="logo">logo</span>
+  <div>
+    <span>Page 2</span>
+    <span>Page 3</span>
+    <span>Page 5</span>
+    <span id="active">Page 1</span>
+    <span>Page 7</span>
+    <span>Page 8</span>
+    <span>Page 9</span>
+    <span>Page 10</span>
+  </div>
+</header>
+
+
 
   <h1>Blog Posts</h1>
   <span>Images from <a href="https://www.freepik.com" id="source">Freepik</a></span>
@@ -22,28 +36,31 @@
   ?>
   <div class="table_wrapper">
     <div id="t1">
-      <span>
+      <img src="photo1.png">
+      <span class="titre">
         <?=$article->_titre?>
       </span>
-      <span>
+      <span class="contenu">
         <?=$article->_contenu?>
       </span>
       <span>READ MORE</span>
     </div>
     <div id="t2">
-      <span>
+      <img src="photo2.jpg">
+      <span class="titre">
         <?=$article2->_titre?>
       </span>
-      <span>
+      <span class="contenu">
         <?=$article2->_contenu?>
       </span>
       <span>READ MORE</span>
     </div>
     <div id="t3">
-      <span>
+      <img src="photo3.png">
+      <span class="titre">
         <?=$article3->_titre?>
       </span>
-      <span>
+      <span class="contenu">
         <?=$article3->_contenu?>
       </span>
       <span>READ MORE</span>
