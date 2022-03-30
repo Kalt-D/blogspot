@@ -42,7 +42,6 @@
   }
   echo '<div class="table_wrapper">';
   foreach ($articles as $key => $value) {
-    // print_r($articles);die;
   ?>
 
     <div>
