@@ -4,7 +4,7 @@
 
 class Article
 {
-    public $_titre,
+    protected $_titre,
         $_contenu,
         $_auteur,
         $_date;

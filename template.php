@@ -36,20 +36,21 @@
     array_push($articles,$article);
   }
   echo '<div class="table_wrapper">';
-  foreach($articles as $table){
-    foreach($table as $key=>$value){
+    foreach($articles as $key=>$value){
+        // print_r($articles);die;
   ?>
   
     <div>
-      <img src="photo1.png">
+      <img src="photo<?=($key+1)?>.png">
       <span class="titre">
-        <?=$table->_titre;}}?>
+        <?=$value->titre();?>
       </span>
       <span class="contenu">
-        <?=$article->_contenu?>
+        <?=$value->contenu();?>
       </span>
       <span>READ MORE</span>
     </div>
+    <?php } ?>
   </div>
   <button>Learn more</button>
   <footer>
