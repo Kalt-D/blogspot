@@ -28,29 +28,34 @@
 
   <h1>Blog Posts</h1>
   <span id="sous-titre">Images from <a href="https://www.freepik.com" id="source">Freepik</a></span>
-  <?php 
-  $repo=new ArticleRepo($data);
-  $articles=array();
-  for ($i=0;$i<count($row);$i++){
-    $article=new Article($row[$i]);
-    array_push($articles,$article);
+  <form method="POST" onsubmit="changeH1(event,change_h1.value)">
+    <h2>Un peu de fantaisie?</h2>
+    <input type="text" name="change_h1" id="change_h1" placeholder="Changez le titre !">
+    <input type="submit" id="submit" value="Changer">
+  </form>
+  <?php
+  $repo = new ArticleRepo($data);
+  $articles = array();
+  for ($i = 0; $i < count($row); $i++) {
+    $article = new Article($row[$i]);
+    array_push($articles, $article);
   }
   echo '<div class="table_wrapper">';
-    foreach($articles as $key=>$value){
-        // print_r($articles);die;
+  foreach ($articles as $key => $value) {
+    // print_r($articles);die;
   ?>
-  
+
     <div>
-      <img src="photo<?=($key+1)?>.png">
+      <img src="photo<?= ($key + 1) ?>.png">
       <span class="titre">
-        <?=$value->titre();?>
+        <?= $value->titre(); ?>
       </span>
       <span class="contenu">
-        <?=$value->contenu();?>
+        <?= $value->contenu(); ?>
       </span>
       <span>READ MORE</span>
     </div>
-    <?php } ?>
+  <?php } ?>
   </div>
   <button>Learn more</button>
   <footer>
@@ -71,6 +76,7 @@
     <div id="sep"></div>
     Lorem ipsum
   </div>
+  <script src="script.js"></script>
 </body>
 
 </html>
